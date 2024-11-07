@@ -1,5 +1,4 @@
-APP DEMO
-book_reading_list app: using state management via useState hook for creating, editing, and deleting a book:
+book_reading_list app DEMO: using state management via useState hook for creating, editing, and deleting a book:
 
 1. Create book using useCallback hook:
 https://github.com/user-attachments/assets/dc703e22-a39b-45de-8a75-0cb7833ab9fd
