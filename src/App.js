@@ -1,4 +1,4 @@
-import { useEffect, useContext } from 'react';
+import { useEffect, useContext, useCallback } from 'react';
 import BookCreate from './components/BookCreate';
 import BookList from './components/BookList';
 import BooksContext from './context/books';
@@ -6,11 +6,13 @@ import BooksContext from './context/books';
 function App() {
     const { fetchBooks } = useContext(BooksContext);
 
-    useEffect(() => {
+    const fetchBooksCallback = useCallback(() => {
         fetchBooks();
-    }, []); 
+    }, [fetchBooks]);
 
-
+    useEffect(() => {
+        fetchBooksCallback();
+    }, [fetchBooksCallback]);
 
     return (
         <div className='app'>
